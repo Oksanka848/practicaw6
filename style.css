@@ -27,21 +27,20 @@
 }
 .main {
   grid-area: main;
-  height: 300px;
-  grid-template-areas:
-    "content-1 content-2"
-    "content-3 content-3 content-3";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding: 10px;
-
-  gap: 10px;
+   
 }
-
+.main-1 {
+  grid-area: main-1;
+  display: grid;
+  grid-template-areas: "content-1 content-2"
+                      
+    "content-3";
+}
 .content-1 {
-  grid-area: content-1;
-  grid-template-columns: 150px 150px;
-  gap: 10px;
+  
+   grid-area: content-1;
+ 
+
 }
 
 .content-2 {
@@ -50,17 +49,25 @@
 
 .content-3 {
   grid-area: content-3;
+  
 }
 
 .footer {
   grid-area: footer;
-  grid-template-areas: "footer-1 footer-2 footer-3 footer-4";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
 
+}
+.foot-1 {
+  display: grid;
+ 
+  grid-template-areas:
+     "footer-1 footer-2 footer-3 footer-4";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+  justify-content: space-between;
+ }
 .footer-1 {
   grid-area: footer-1;
+
 }
 .footer-2 {
   grid-area: footer-2;
