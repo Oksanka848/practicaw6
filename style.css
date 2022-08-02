@@ -2,7 +2,7 @@
   border: 1px solid rebeccapurple;
   color: green;
   text-align: center;
-  padding: 1px;
+  padding: 2px;
 }
 .container {
   display: grid;
@@ -11,75 +11,83 @@
   grid-template-areas:
     "header header header header"
     "main main main aside"
-    "content-1 content-2 content-2 aside"
+      "content-1 content-2 content-2 aside"
     "content-3 content-3 content-3 aside"
     "footer footer footer footer"
     "footer-1 footer-2 footer-3 footer-4";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr -1fr 1fr;
+
 }
 .header {
   grid-area: header;
+  height: 10vh;
 }
 
 .aside {
   grid-area: aside;
+  height: 50vh;
 }
 .main {
   grid-area: main;
-   
+  height: 50vh;
+  display: grid;
+  align-content: flex-end;
+  justify-items: stretch;
 }
 .main-1 {
   grid-area: main-1;
-  height: 60vh;
+  
   display: grid;
   grid-template-areas: "content-1 content-2"
   "content-3 content-3";
-  grid-template-columns: 1 1;
-  grid-template-rows: 3 3 3;                 
-    align-content: flex-end;
+  align-content: end;
 }
 .content-1 {
   
    grid-area: content-1;
  margin: 5px;
+ height: 10vh
 
 }
 
 .content-2 {
   grid-area: content-2;
   margin: 5px;
+  
 }
 
 .content-3 {
   grid-area: content-3;
   margin: 5px;
+  height: 10vh
 }
 
 .footer {
   grid-area: footer;
-
+  height: auto;
+  
 }
 .foot-1 {
   display: grid;
- 
-  grid-template-areas:
-     "footer-1 footer-2 footer-3 footer-4";
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   
-  justify-content: space-between;
+    grid-template-areas: "footer-1 footer-2 footer-3 footer-4";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+height: auto;
  }
 .footer-1 {
   grid-area: footer-1;
-  margin: 15px;
+  margin: 13px;
+  
 
 }
 .footer-2 {
-  grid-area: footer-2; margin: 15px;
+  grid-area: footer-2; margin: 13px;
+  height: 10vh;
 }
 .footer-3 {
-  grid-area: footer-3; margin: 15px;
+  grid-area: footer-3; margin: 13px;
 }
 .footer-4 {
-  grid-area: footer-4; margin: 15px;
+  grid-area: footer-4; margin: 13px;
 }
