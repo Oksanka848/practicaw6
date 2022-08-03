@@ -2,18 +2,19 @@
   border: 1px solid rebeccapurple;
   color: green;
   text-align: center;
-  padding: 2px;
+  padding: 10px;
+  
 }
 .container {
   display: grid;
   width: 300px;
-  height: 300px;
+  height: 400px;
   grid-template-areas:
     "header header header header"
     "main main main aside"
      "footer footer footer footer";
     grid-template-columns: 100% 40% 40% 65%;
-    grid-template-rows: auto 60% auto;
+    grid-template-rows: 15% 65% auto;
 
 }
 .header {
@@ -31,11 +32,10 @@
   grid-template-areas: "main main"
                        "content-1 content-2"
                       "content-3 content-3";
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 65% 15% 20%;
-  align-items: center;
+    grid-template-rows: 60% 20% 20%;
   text-align: center;
- }
+   }
+ 
 
 .content-1 {
      grid-area: content-1;
